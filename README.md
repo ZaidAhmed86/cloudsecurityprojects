@@ -1,4 +1,4 @@
-# AWS Cloud Security Projects
+# Cloud Security Projects
 
 A portfolio of hands-on AWS security projects built with Terraform.
 
