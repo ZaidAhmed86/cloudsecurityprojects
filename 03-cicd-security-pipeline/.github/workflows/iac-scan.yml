@@ -1,0 +1,29 @@
+name: IaC Security Scanning
+
+on:
+  push:
+    paths:
+      - '03-cicd-security-pipeline/**'
+      - '02-vpc-infrastructure-as-code/**'
+  pull_request:
+    paths:
+      - '03-cicd-security-pipeline/**'
+      - '02-vpc-infrastructure-as-code/**'
+
+jobs:
+  checkov:
+    name: Checkov IaC Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: 02-vpc-infrastructure-as-code/terraform
+          framework: terraform
+          soft_fail: false
+          output_format: cli
+          download_external_modules: false
