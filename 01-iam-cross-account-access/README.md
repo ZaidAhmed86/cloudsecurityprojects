@@ -9,8 +9,6 @@
 ---
 
 ## Account Structure
-
-## Account Structure
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                       AWS ENVIRONMENT                           │
