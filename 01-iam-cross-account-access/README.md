@@ -4,7 +4,7 @@
 
 - This project implements cross-account IAM access between two AWS accounts — a Security Account and a Workload Account. 
 - Instead of creating shared credentials, we use IAM role assumption via AWS STS, which is how production environments handle access across accounts.
-- All infrastructure is managed with Terraform and tested end-to-end.
+- All infrastructure is managed with Terraform and tested end-to-end
 
 ---
 
