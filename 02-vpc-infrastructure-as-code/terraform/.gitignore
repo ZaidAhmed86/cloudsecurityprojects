@@ -1,0 +1,14 @@
+Set-Content -Path ".gitignore" -Encoding UTF8 -Value @"
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform provider binaries
+.terraform/
+
+# Variable files that may contain sensitive values
+*.auto.tfvars
+
+# Crash logs
+crash.log
+"@
