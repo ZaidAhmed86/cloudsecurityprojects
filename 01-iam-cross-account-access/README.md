@@ -4,11 +4,9 @@
 
 - This project implements cross-account IAM access between two AWS accounts — a Security Account and a Workload Account. 
 - Instead of creating shared credentials, we use IAM role assumption via AWS STS, which is how production environments handle access across accounts.
-- All infrastructure is managed with Terraform and tested end-to-end.
+- All infrastructure is managed with Terraform and tested end-to-end
 
 ---
-
-## Account Structure
 
 ## Account Structure
 ```
@@ -40,11 +38,11 @@
 
 ## What Was Built
 
-### Security Account (621715857254)
+### Security Account (111111111111)
 - **SecurityAdmin** — IAM user with no direct permissions to workload resources
 - **AssumeRolesInWorkloadAccount** — Policy attached to SecurityAdmin allowing it to assume the 3 roles below
 
-### Workload Account (117327730775)
+### Workload Account (222222222222)
 - **SecurityAuditRole** — Read-only access for security reviews
 - **IncidentResponseRole** — Read + limited write for active incident handling
 - **DeploymentRole** — Scoped CI/CD permissions for deployments
