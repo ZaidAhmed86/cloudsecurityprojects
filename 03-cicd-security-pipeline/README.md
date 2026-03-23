@@ -39,6 +39,21 @@ filters to only trigger on relevant file changes.
 
 ---
 
+## Note on Workflow Location
+
+- GitHub Actions requires workflows to live at `.github/workflows/` at the
+repository root. 
+- The workflow files for this project are located there
+rather than inside this project folder. 
+- This is standard practice in a
+monorepo where multiple projects share one repository.
+
+The path filters in each workflow ensure they only trigger on changes
+relevant to this project — pushing changes to other projects will not
+fire these scans.
+
+---
+
 ## Security Tools
 
 - **Gitleaks** scans the entire Git history for secrets — AWS keys, API tokens, passwords, and private keys. 
