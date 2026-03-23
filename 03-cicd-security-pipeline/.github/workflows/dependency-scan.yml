@@ -1,0 +1,33 @@
+name: Dependency Scanning
+
+on:
+  push:
+    paths:
+      - '03-cicd-security-pipeline/**'
+  pull_request:
+    paths:
+      - '03-cicd-security-pipeline/**'
+  schedule:
+    - cron: '0 9 * * 1'
+
+jobs:
+  npm-audit:
+    name: npm Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: 03-cicd-security-pipeline/app
+        run: npm install
+
+      - name: Run npm audit
+        working-directory: 03-cicd-security-pipeline/app
+        run: npm audit --audit-level=critical

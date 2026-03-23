@@ -1,0 +1,28 @@
+name: SAST - Static Analysis
+
+on:
+  push:
+    paths:
+      - '03-cicd-security-pipeline/**'
+  pull_request:
+    paths:
+      - '03-cicd-security-pipeline/**'
+
+jobs:
+  semgrep:
+    name: Semgrep Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: >-
+            p/security-audit
+            p/secrets
+            p/nodejs
+        env:
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
