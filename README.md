@@ -39,12 +39,20 @@ first-class concern. Covers network segmentation, defence in depth, security
 group chaining, VPC flow logs, and VPC endpoints. Full infrastructure is
 version-controlled and reproducible with a single command.
 
+**Project 3 — CI/CD Pipeline With Security Built In**
+Embeds five automated security scans into a GitHub Actions pipeline — secret
+scanning, SAST, dependency scanning, IaC scanning, and container scanning.
+Every finding is triaged with documented reasoning on what blocks, what warns,
+and what is accepted as a deliberate tradeoff.
+
 ---
 
 ## Repository Structure
 ```
-cloud-security-portfolio/
+cloudsecurityprojects/
 ├── README.md                          # This file
+├── .github/
+│   └── workflows/                     # GitHub Actions security workflows
 ├── 01-iam-cross-account-access/
 │   ├── README.md                      # Project documentation
 │   ├── terraform/                     # Infrastructure code
@@ -55,8 +63,8 @@ cloud-security-portfolio/
 │   └── docs/
 ├── 03-cicd-security-pipeline/
 │   ├── README.md
-│   ├── .github/workflows/             # Pipeline configurations
-│   └── policies/                      # Security policies
+│   ├── app/                           # Node.js application
+│   └── docs/                          # Additional documentation
 ```
 
 ---
@@ -66,6 +74,8 @@ cloud-security-portfolio/
 - **Cloud:** AWS
 - **IaC:** Terraform >= 1.0
 - **CLI:** AWS CLI v2
+- **CI/CD:** GitHub Actions
+- **Security Scanning:** Gitleaks, Semgrep, Checkov, Trivy, npm audit
 - **Version Control:** Git
 
 ---
