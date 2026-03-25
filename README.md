@@ -13,7 +13,7 @@ code, and clear reasoning behind every decision.
 |---|---------|--------|--------|
 | 1 | [IAM Cross-Account Access](./01-iam-cross-account-access/) | Identity & Access Management | ✅ Complete |
 | 2 | [VPC Infrastructure as Code](./02-vpc-infrastructure-as-code/) | Network Security | ✅ Complete |
-| 3 | CI/CD Security Pipeline | DevSecOps | 🔜 Coming Soon |
+| 3 | [CI/CD Security Pipeline](./03-cicd-security-pipeline/) | DevSecOps | ✅ Complete |
 | 4 | Cloud Security Audit | Compliance & Audit | 🔜 Coming Soon |
 | 5 | Centralized Logging | Visibility & Logging | 🔜 Coming Soon |
 | 6 | Break-Glass Access | Operations & Recovery | 🔜 Coming Soon |
@@ -53,6 +53,10 @@ cloud-security-portfolio/
 │   ├── README.md
 │   ├── terraform/
 │   └── docs/
+├── 03-cicd-security-pipeline/
+│   ├── README.md
+│   ├── .github/workflows/             # Pipeline configurations
+│   └── policies/                      # Security policies
 ```
 
 ---
