@@ -166,3 +166,4 @@ All role assumptions are logged automatically in AWS CloudTrail. The following e
 > **Note:** The full architecture uses 4 accounts (Security, Workload, Logging, Dev/Test) 
 > within AWS Organizations. This project implements the core pattern using 2 accounts — 
 > the same trust and role assumption mechanics apply identically at any scale.
+
