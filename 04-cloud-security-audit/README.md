@@ -106,6 +106,6 @@ See `docs/compliance-mapping.md` for full framework analysis.
 - ~40% of findings were noise — a junior analyst could spend days fixing things that aren't broken
 - Severity labels are a starting point, not a verdict
 - Detection gaps are often more dangerous than misconfiguration gaps — no CloudTrail means no audit trail, which turns every other finding into an unknown
-- Accepted risk is not ignored risk — documenting why a finding doesn't apply is professional practice, not 
+- Accepted risk is not ignored risk — documenting why a finding doesn't apply is professional practice, not negligence.
 
 ---
